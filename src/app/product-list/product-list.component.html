@@ -2,7 +2,7 @@
 
 <div *ngFor="let product of products">
   <h3>
-     <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
+     <a [title]="product.name + ' details'" [routerLink]="['/products', product.productId]">
       {{ product.name }}
     </a>
   </h3>
@@ -15,6 +15,7 @@
     Chia Sẻ Ngay
   </button>
 
+  <!--Input la Product; output la (notify), neu co notify goi ham onNotify()-->
   <app-product-alerts
     [product]="product"
     (notify)="onNotify()">
